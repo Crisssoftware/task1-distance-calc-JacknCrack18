@@ -15,7 +15,7 @@ class Pub_Sub(Node):
         distance = (msg.x**2 + msg.y**2)**0.5
 
         msg = String()
-        msg = "Distance is {}".format(distance)
+        msg.data = "Distance is {}".format(distance)
         self.publisher_.publish(msg)
         self.get_logger().info("Publish: {}".format(msg.data))
 
